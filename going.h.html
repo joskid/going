@@ -1,45 +1,284 @@
-<!DOCTYPE html>  <html> <head>   <title>going.h</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="going.c.html">                 going.c               </a>                                           <a class="source" href="going.h.html">                 going.h               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               going.h             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>Header file for the <a href="going.c.html"><code>going.c</code> source file</a>.</p>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <h2>Constants</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <p><code>syslog(3)</code> needs an identity.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define IDENT &quot;going&quot;</span></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>A semantic version.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define VERSION &quot;0.1.0-beta&quot;</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>The command line flag used to change the default configuration directory.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define CMD_FLAG_CONFDIR &quot;-d&quot;</span></pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <p>Short usage instructions if you fail at typing.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define USAGE \</span>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>going.h</title>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>going.h</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p>Header file for the <a href="going.c.html"><code>going.c</code> source file</a>.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-Constants'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-Constants">&#182;</a>
+        </div>
+        <h2>Constants</h2>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p><code>syslog(3)</code> needs an identity.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define IDENT &quot;going&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>A semantic version.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define VERSION &quot;0.1.0-beta&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p>The command line flag used to change the default configuration directory.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define CMD_FLAG_CONFDIR &quot;-d&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>Short usage instructions if you fail at typing.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define USAGE \</span>
 <span class="cp">  &quot;going &quot; VERSION &quot; (c) 2012 Eivind Uggedal\n&quot; \</span>
-<span class="cp">  &quot;usage: going [&quot; CMD_FLAG_CONFDIR &quot; conf.d]\n&quot;</span></pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <p>The sizes of our childrens' members. By using constant sizes we only
-have to <code>malloc(3)</code> our entire child structure once per child.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define CHILD_NAME_SIZE 32</span>
+<span class="cp">  &quot;usage: going [&quot; CMD_FLAG_CONFDIR &quot; conf.d]\n&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>The sizes of our childrens&#39; members. By using constant sizes we only
+have to <code>malloc(3)</code> our entire child structure once per child.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define CHILD_NAME_SIZE 32</span>
 <span class="cp">#define CHILD_CMD_SIZE 256</span>
-<span class="cp">#define CHILD_ARGV_LEN CHILD_CMD_SIZE/2</span></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>Configuration file specifics like the default place to look for
+<span class="cp">#define CHILD_ARGV_LEN CHILD_CMD_SIZE/2</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>Configuration file specifics like the default place to look for
 configurations, the size of the buffer we use to read configuration
-lines, and the keys of our configuration format.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define CONFIG_DIR &quot;/etc/going.d&quot;</span>
+lines, and the keys of our configuration format.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define CONFIG_DIR &quot;/etc/going.d&quot;</span>
 <span class="cp">#define CONFIG_LINE_BUFFER_SIZE CHILD_CMD_SIZE+32</span>
-<span class="cp">#define CONFIG_CMD_KEY &quot;cmd&quot;</span></pre></div>             </td>           </tr>                               <tr id="section-9">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-9">&#182;</a>               </div>               <p>Bad children which terminates before the limit we set here should be
-quarantined accordingly.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define	QUARANTINE_TRIGGER 5</span>
-<span class="k">static</span> <span class="k">struct</span> <span class="n">timespec</span> <span class="n">QUARANTINE_PERIOD</span> <span class="o">=</span> <span class="p">{</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-10">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-10">&#182;</a>               </div>               <p>If our system fails at giving us resources for <code>malloc(3)</code> or <code>fork(3)</code>
-we'll have to wait a little.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="cp">#define EMERG_SLEEP 1</span></pre></div>             </td>           </tr>                               <tr id="section-11">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-11">&#182;</a>               </div>               <h2>Types</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-12">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-12">&#182;</a>               </div>               <p>The <code>child_t</code> type holds information for a child under supervision. We
+<span class="cp">#define CONFIG_CMD_KEY &quot;cmd&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-9'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-9">&#182;</a>
+        </div>
+        <p>Bad children which terminates before the limit we set here should be
+quarantined accordingly.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define	QUARANTINE_TRIGGER 5</span>
+<span class="k">static</span> <span class="k">struct</span> <span class="n">timespec</span> <span class="n">QUARANTINE_PERIOD</span> <span class="o">=</span> <span class="p">{</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-10'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-10">&#182;</a>
+        </div>
+        <p>If our system fails at giving us resources for <code>malloc(3)</code> or <code>fork(3)</code>
+we&#39;ll have to wait a little.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#define EMERG_SLEEP 1</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-Types'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-Types">&#182;</a>
+        </div>
+        <h2>Types</h2>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-12'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-12">&#182;</a>
+        </div>
+        <p>The <code>child_t</code> type holds information for a child under supervision. We
 identify it based on the name of its configuration file, parse its
 command line including arguments, track its process id, the last time
 it was started, and if it has been quarantined for terminating too fast.
 By having a pointer to the next child we get a nice lightweight linked
-list of children.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="k">typedef</span> <span class="k">struct</span> <span class="n">going_child</span> <span class="p">{</span>
+list of children.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="k">typedef</span> <span class="k">struct</span> <span class="n">going_child</span> <span class="p">{</span>
   <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="n">CHILD_NAME_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
   <span class="kt">char</span> <span class="n">cmd</span><span class="p">[</span><span class="n">CHILD_CMD_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
   <span class="n">pid_t</span> <span class="n">pid</span><span class="p">;</span>
   <span class="kt">time_t</span> <span class="n">up_at</span><span class="p">;</span>
   <span class="n">bool</span> <span class="n">quarantined</span><span class="p">;</span>
   <span class="k">struct</span> <span class="n">going_child</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">child_t</span><span class="p">;</span></pre></div>             </td>           </tr>                               <tr id="section-13">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-13">&#182;</a>               </div>               <h2>Prototypes</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-14">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-14">&#182;</a>               </div>               <p>Defining prototypes of our functions makes laying out the program
-in a literate style possible.</p>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-15">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-15">&#182;</a>               </div>               <p>Argument parsing</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kt">char</span> <span class="o">*</span><span class="n">parse_args</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-16">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-16">&#182;</a>               </div>               <p>Configuration</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kt">void</span> <span class="n">parse_confdir</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">dir</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">child_t</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-Prototypes'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-Prototypes">&#182;</a>
+        </div>
+        <h2>Prototypes</h2>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-14'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-14">&#182;</a>
+        </div>
+        <p>Defining prototypes of our functions makes laying out the program
+in a literate style possible.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-15'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-15">&#182;</a>
+        </div>
+        <p>Argument parsing</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="kt">char</span> <span class="o">*</span><span class="n">parse_args</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-16'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-16">&#182;</a>
+        </div>
+        <p>Configuration</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="kt">void</span> <span class="n">parse_confdir</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">dir</span><span class="p">);</span>
 <span class="kt">void</span> <span class="n">add_new_children</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">dir</span><span class="p">,</span> <span class="k">struct</span> <span class="n">dirent</span> <span class="o">**</span><span class="n">dlist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dn</span><span class="p">);</span>
 <span class="kt">void</span> <span class="n">remove_old_children</span><span class="p">(</span><span class="k">struct</span> <span class="n">dirent</span> <span class="o">**</span><span class="n">dlist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dn</span><span class="p">);</span>
-<span class="n">bool</span> <span class="n">parse_config</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-17">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-17">&#182;</a>               </div>               <p>Execution of children</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kt">void</span> <span class="n">spawn_unquarantined_children</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="n">bool</span> <span class="n">parse_config</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-17'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-17">&#182;</a>
+        </div>
+        <p>Execution of children</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="kt">void</span> <span class="n">spawn_unquarantined_children</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="n">bool</span> <span class="n">respawn_terminated_children</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="kt">void</span> <span class="n">spawn_child</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-18">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-18">&#182;</a>               </div>               <p>Signal handling</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kt">void</span> <span class="n">block_signals</span><span class="p">(</span><span class="n">sigset_t</span> <span class="o">*</span><span class="n">block_mask</span><span class="p">);</span>
-<span class="kt">void</span> <span class="n">wait_forever</span><span class="p">(</span><span class="n">sigset_t</span> <span class="o">*</span><span class="n">block_mask</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">confdir</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-19">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-19">&#182;</a>               </div>               <p>Children handling</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="n">child_t</span> <span class="o">*</span><span class="n">get_tail_child</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">spawn_child</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-18'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-18">&#182;</a>
+        </div>
+        <p>Signal handling</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="kt">void</span> <span class="n">block_signals</span><span class="p">(</span><span class="n">sigset_t</span> <span class="o">*</span><span class="n">block_mask</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">wait_forever</span><span class="p">(</span><span class="n">sigset_t</span> <span class="o">*</span><span class="n">block_mask</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">confdir</span><span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-19'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-19">&#182;</a>
+        </div>
+        <p>Children handling</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="n">child_t</span> <span class="o">*</span><span class="n">get_tail_child</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="n">bool</span> <span class="n">has_child</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">);</span>
 <span class="n">bool</span> <span class="n">child_active</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="k">struct</span> <span class="n">dirent</span> <span class="o">**</span><span class="n">dlist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dn</span><span class="p">);</span>
 <span class="n">bool</span> <span class="n">child_recently_spawned</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seconds_ago</span><span class="p">);</span>
 <span class="kt">void</span> <span class="n">kill_children</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="kt">void</span> <span class="n">kill_child</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">);</span>
 <span class="kt">void</span> <span class="n">cleanup_children</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="kt">void</span> <span class="n">cleanup_child</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">);</span></pre></div>             </td>           </tr>                               <tr id="section-20">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-20">&#182;</a>               </div>               <p>Utility functions</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="n">bool</span> <span class="n">str_not_empty</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">cleanup_child</span><span class="p">(</span><span class="n">child_t</span> <span class="o">*</span><span class="n">ch</span><span class="p">);</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-20'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-20">&#182;</a>
+        </div>
+        <p>Utility functions</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="n">bool</span> <span class="n">str_not_empty</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">);</span>
 <span class="n">bool</span> <span class="n">safe_strcpy</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">dst</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
 <span class="kt">void</span> <span class="o">*</span><span class="n">safe_malloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
 <span class="kt">int</span> <span class="n">only_files_selector</span><span class="p">(</span><span class="k">const</span> <span class="k">struct</span> <span class="n">dirent</span> <span class="o">*</span><span class="n">d</span><span class="p">);</span>
-<span class="kt">void</span> <span class="n">slog</span><span class="p">(</span><span class="kt">int</span> <span class="n">priority</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">message</span><span class="p">,</span> <span class="p">...);</span>
-
-</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 
+<span class="kt">void</span> <span class="n">slog</span><span class="p">(</span><span class="kt">int</span> <span class="n">priority</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">message</span><span class="p">,</span> <span class="p">...);</span></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
