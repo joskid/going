@@ -69,8 +69,11 @@
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#OPTIONS">OPTIONS</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
     <a href="#FILES">FILES</a>
+    <a href="#ERROR-LOGGING">ERROR LOGGING</a>
     <a href="#SIGNALS">SIGNALS</a>
+    <a href="#BUGS">BUGS</a>
     <a href="#AUTHOR">AUTHOR</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -98,6 +101,15 @@ configuration files. Child processes are promptly respawned if they terminate.</
 <p>If a child terminates too fast (within a window of 5 seconds) it will be
 quarantined for 30 seconds before it will be respawned.</p>
 
+<h2 id="OPTIONS">OPTIONS</h2>
+
+<dl>
+<dt class="flush"><code>-d</code></dt><dd>Use an alternate configuration directory.</dd>
+</dl>
+
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
+
 <p><code>going</code> is designed to be started from <a class="man-ref" href="http://manpages.debian.net/cgi-bin/man.cgi?query=INIT&sektion=8">init<span class="s">(8)</span></a>'s <a class="man-ref" href="http://manpages.debian.net/cgi-bin/man.cgi?query=INITTAB&sektion=5">inittab<span class="s">(5)</span></a> with the
 <em>respawn</em> action:</p>
 
@@ -122,20 +134,6 @@ removed files in <code>/etc/going.d</code> with:</p>
 <pre><code>kill -HUP &lt;pid of going>
 </code></pre>
 
-<p>Reloading configurations for already running processes is currently not
-supported without sending <code>going</code> a <code>SIGTERM</code> signal which terminates all
-its supervised processeses.</p>
-
-<p>All abnormal events will be logged to the daemon syslog facility which
-normally can be inspected in <code>/var/log/daemon.log</code>.</p>
-
-<h2 id="OPTIONS">OPTIONS</h2>
-
-<dl>
-<dt class="flush"><code>-d</code></dt><dd>Use an alternate configuration directory.</dd>
-</dl>
-
-
 <h2 id="FILES">FILES</h2>
 
 <dl>
@@ -144,17 +142,31 @@ as specified in <a class="man-ref" href="going.5.html">going<span class="s">(5)<
 </dl>
 
 
+<h2 id="ERROR-LOGGING">ERROR LOGGING</h2>
+
+<p>All abnormal events will be logged to the daemon syslog facility which
+normally can be inspected in <code>/var/log/daemon.log</code>.</p>
+
 <h2 id="SIGNALS">SIGNALS</h2>
 
 <dl>
-<dt class="flush"><code>SIGHUP</code></dt><dd>Describe ...</dd>
-<dt class="flush"><code>SIGTERM</code></dt><dd>Describe ...</dd>
+<dt class="flush"><code>SIGHUP</code></dt><dd>Trigger <code>going</code> to immediately iterate all configurations in
+its configuration directory and spawn processes for new configuration
+files and terminate running processes lacking a configuration file.</dd>
+<dt class="flush"><code>SIGTERM</code></dt><dd>Trigger <code>going</code> to send the same signal to all its supervised processes
+and clean up before terminating with <a class="man-ref" href="http://manpages.debian.net/cgi-bin/man.cgi?query=EXIT&sektion=3">exit<span class="s">(3)</span></a>.</dd>
 </dl>
 
 
+<h2 id="BUGS">BUGS</h2>
+
+<p>Reloading configurations for already running processes is currently not
+supported without sending <code>going</code> a <code>SIGTERM</code> signal which terminates all
+its supervised processeses.</p>
+
 <h2 id="AUTHOR">AUTHOR</h2>
 
-<p>Eivind Uggedal <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x65;&#x69;&#x76;&#x69;&#110;&#x64;&#64;&#117;&#103;&#x67;&#101;&#100;&#x61;&#108;&#x2e;&#99;&#111;&#x6d;" data-bare-link="true">&#x65;&#x69;&#118;&#x69;&#x6e;&#100;&#64;&#x75;&#x67;&#103;&#101;&#x64;&#97;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
+<p>Eivind Uggedal <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x65;&#105;&#118;&#x69;&#x6e;&#100;&#x40;&#117;&#103;&#103;&#101;&#x64;&#97;&#108;&#46;&#x63;&#x6f;&#x6d;" data-bare-link="true">&#101;&#105;&#x76;&#x69;&#110;&#100;&#x40;&#117;&#x67;&#x67;&#101;&#100;&#x61;&#108;&#46;&#99;&#x6f;&#109;</a></p>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
