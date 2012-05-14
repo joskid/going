@@ -64,7 +64,7 @@
         <p>A semantic version.</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="cp">#define VERSION &quot;0.1.2&quot;</span></pre></div>
+        <div class='highlight'><pre><span class="cp">#define VERSION &quot;0.9.1&quot;</span></pre></div>
       </td>
     </tr>
     <tr id='section-5'>
@@ -102,6 +102,7 @@ have to <code>malloc(3)</code> our entire child structure once per child.</p>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#define CHILD_NAME_SIZE 32</span>
 <span class="cp">#define CHILD_CMD_SIZE 256</span>
+<span class="cp">#define CHILD_CWD_SIZE 256</span>
 <span class="cp">#define CHILD_ARGV_LEN CHILD_CMD_SIZE/2</span></pre></div>
       </td>
     </tr>
@@ -117,7 +118,8 @@ lines, and the keys of our configuration format.</p>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#define CONFIG_DIR &quot;/etc/going.d&quot;</span>
 <span class="cp">#define CONFIG_LINE_BUFFER_SIZE CHILD_CMD_SIZE+32</span>
-<span class="cp">#define CONFIG_CMD_KEY &quot;cmd&quot;</span></pre></div>
+<span class="cp">#define CONFIG_CMD_KEY &quot;cmd&quot;</span>
+<span class="cp">#define CONFIG_CWD_KEY &quot;cwd&quot;</span></pre></div>
       </td>
     </tr>
     <tr id='section-9'>
@@ -172,6 +174,7 @@ list of children.</p>
         <div class='highlight'><pre><span class="k">typedef</span> <span class="k">struct</span> <span class="n">going_child</span> <span class="p">{</span>
   <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="n">CHILD_NAME_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
   <span class="kt">char</span> <span class="n">cmd</span><span class="p">[</span><span class="n">CHILD_CMD_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+  <span class="kt">char</span> <span class="n">cwd</span><span class="p">[</span><span class="n">CHILD_CWD_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
   <span class="n">pid_t</span> <span class="n">pid</span><span class="p">;</span>
   <span class="kt">time_t</span> <span class="n">up_at</span><span class="p">;</span>
   <span class="n">bool</span> <span class="n">quarantined</span><span class="p">;</span>
